@@ -1,5 +1,3 @@
-package ru.otus.javabasics;
-
 import java.util.Scanner;
 
 public class Calculator {
@@ -16,7 +14,6 @@ public class Calculator {
         operation = sc.next().charAt(0);
         b = sc.nextInt();
 
-
         switch (operation) {
             case '+':
                 result = a + b;
@@ -29,7 +26,7 @@ public class Calculator {
                 break;
         }
 
-        // Как переписать в if.
+        // Как переписать в if?
 
         System.out.println(a + " " + operation + " " + b + " = " + result);
     }

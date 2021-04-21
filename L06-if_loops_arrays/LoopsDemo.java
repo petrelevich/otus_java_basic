@@ -1,8 +1,4 @@
-package ru.otus.javabasics;
-
-import com.sun.security.jgss.GSSUtil;
-
-public class Loops {
+public class LoopsDemo {
 
     public static void main(String[] args) {
         // while
@@ -20,9 +16,9 @@ public class Loops {
         }
 
         // В for можно какие-то части опускать
-        int j = 0;
-        for (; j < 5; j++) {
-            System.out.println(10 * j);
+        int k = 0;
+        for (; k < 5; k++) {
+            System.out.println(10 * k);
         }
 
         // Может быть, что код никогда не выполнится
@@ -53,18 +49,35 @@ public class Loops {
         }
 
         // Обход массива
+        System.out.println();
         System.out.println("=== Обход массива");
         int[] daysInMonths = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for (int i = 0; i < daysInMonths.length; i++) {
             System.out.println("Дней в месяце " + (i + 1) + " : " + daysInMonths[i]);
         }
-        
+
+        System.out.println("matrix:");
+        int[][] matrix = {
+                {0, 0, 0, 0, 0},
+                {0, 1, 2, 3, 4},
+                {0, 2, 4, 6, 8},
+                {0, 3, 6, 9, 12},
+                {0, 4, 8, 12, 16}
+        };
+
+        for(int i =0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                int n = matrix[i][j];
+                System.out.print(n + " ");
+            }
+            System.out.println();
+        }
         // ----- for each
         System.out.println();
         System.out.println("=== for each");
         String[] answers = new String[]{"aaa", "bbb", "ccc", "ddd"};
-        for (String answer : answers) {
-            System.out.println(answer);
+        for (String item : answers) {
+            System.out.println(item);
         }
 
         // continue
@@ -78,13 +91,15 @@ public class Loops {
         }
 
         // break
+        // Бесконечный цикл, если значение больше 50, то выходим из цикла
         System.out.println("=== break");
         int i = 0;
         while (true) {
             i++;
             if (i > 50)
                 break;
+            //...
         }
-        System.out.printf("i = " + i);
+        System.out.println("i = " + i);
     }
 }

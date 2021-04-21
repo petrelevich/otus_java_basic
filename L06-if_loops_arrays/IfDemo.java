@@ -1,8 +1,4 @@
-package ru.otus.javabasics;
-
-import java.util.Scanner;
-
-public class If {
+public class IfDemo {
     public static void main(String[] args) {
         // if
         System.out.println("=== if / if else");
@@ -43,7 +39,5 @@ public class If {
 //        else absoluteValue = value;
 
         // switch
-
-
     }
 }

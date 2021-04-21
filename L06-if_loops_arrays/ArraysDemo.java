@@ -1,6 +1,6 @@
-package ru.otus.javabasics;
+import java.util.Arrays;
 
-public class Arrays {
+public class ArraysDemo {
     public static void main(String[] args) {
         // Надо хранить пять значений.
         // Можно сделать так:
@@ -13,14 +13,14 @@ public class Arrays {
 
         // объявление массива и выделение памяти под 5 элементов
         int[] numbers; // здесь массива еще нет, здесь мы его только объявили
-        numbers = new int[10]; // а здесь выделяем под него память
+        numbers = new int[5]; // а здесь выделяем под него память
         // new - специальная операция для выделения памяти
         // Элементы массива инициализируются значениями по умолчанию
 
         // Можно объединить объявление и выделение памяти:
         //int[] numbers = new int[5];
 
-        // задаем значения элементов массива
+        // задаем значения элементов массива через квадратные скобки []
         // нумерация с 0, а не с 1
         numbers[0] = 100;
         numbers[1] = 200;
@@ -34,6 +34,7 @@ public class Arrays {
         System.out.println("Элемент с индексом 3: " + numbers[3]);
         System.out.println("Элемент с индексом 4: " + numbers[4]);
         System.out.println("Длина массива: " + numbers.length);
+        System.out.println("Arrays.toString(): " + Arrays.toString(numbers));
 
         // Инициализатор массива
         System.out.println("=== Инициализатор массива");
@@ -52,11 +53,11 @@ public class Arrays {
         System.out.println(names[0][2] + names[1][1]);
 
         int[][] matrix = {
-                { 0, 0, 0, 0, 0 },
-                { 0, 1, 2, 3, 4 },
-                { 0, 2, 4, 6, 8 },
-                { 0, 3, 6, 9, 12 },
-                { 0, 4, 8, 12, 16 }
+                {0, 0, 0, 0, 0},
+                {0, 1, 2, 3, 4},
+                {0, 2, 4, 6, 8},
+                {0, 3, 6, 9, 12},
+                {0, 4, 8, 12, 16}
         };
 
         // Массив перечислений
