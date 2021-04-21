@@ -19,6 +19,18 @@ public class If {
             System.out.println("Меньше 300");
         }
 
+        int a = 10;
+        int b = 50;
+        int c = 100;
+        // Попадает ли b в отрезок [a; c]
+        if (a <= b && b <= c){
+            System.out.println("(a <= b && b <= c) == true");
+        }
+
+        if (!(a > b)){
+            System.out.println("!(a > b) == true");
+        }
+
         // тернарный оператор :?
         System.out.println("=== тернарный оператор :?");
         int value = -5;
