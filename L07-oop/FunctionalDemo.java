@@ -4,7 +4,10 @@ import java.util.function.Function;
 
 public class FunctionalDemo {
     public static int process(int a, int b, BiFunction<Integer, Integer, Integer> func) {
-        return func.apply(a, b);
+        System.out.println("Start process()...");
+        Integer result = func.apply(a, b);
+        System.out.println("End process()");
+        return result;
     }
 
     public static void main(String[] args) {
