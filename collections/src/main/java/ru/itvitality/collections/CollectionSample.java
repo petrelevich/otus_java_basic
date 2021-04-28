@@ -45,5 +45,7 @@ public class CollectionSample {
 
         System.out.println( "Васька в списке :" + cats.contains( new Cat( "Васька" ) ) );
 
+        // показать проблему правильного выбора id
+
     }
 }
