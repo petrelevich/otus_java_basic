@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Стилизованная таблица</title>
+
+    <style>
+        h3 {
+            color: steelblue;
+        }
+
+        .students-tab {
+            border: 1px solid steelblue;
+            width: 650px;
+            border-collapse: collapse;
+            margin-bottom: 300px;
+        }
+
+        .students-tab tr td {
+            border: 1px solid steelblue;
+        }
+
+        .students-tab-col1 {
+            width: 300px;
+        }
+
+        .students-tab-col2 {
+            width: 120px;
+        }
+
+        .students-tab-col3 {
+            width: 150px;
+        }
+
+        .students-tab-col4 {
+            width: 80px;
+        }
+
+    </style>
+
+  
+</head>
+<body>
+    <h3>Таблица студентов</h3>
+    <table class="students-tab" id="studentsTab">
+        <thead>
+            <tr>
+                <td class="students-tab-col1">Имя студента</td>
+                <td class="students-tab-col2">Пол</td>
+                <td class="students-tab-col3">Дата рождения</td>
+                <td class="students-tab-col4">Возраст</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Иван Ограномович Штейн</td>
+                <td>мужчина</td>
+                <td>12.06.1974</td>
+                <td>46</td>
+            </tr>
+            <tr>
+                <td>Гертруда Анатольевна Иванова</td>
+                <td>женщина</td>
+                <td>01.01.1987</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Воланд Игоревич Муха</td>
+                <td>мужчина</td>
+                <td>27.04.1974</td>
+                <td>47</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr> <tr>
+                <td colspan="3">Средний возраст студентов</td>
+                <td>42</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    
+</body>
+</html>
