@@ -8,12 +8,17 @@ public class Calculator {
         char operation;
         int result = 0;
 
-        System.out.println("Введите два числа и операцию через пробел (например, 3 + 7):");
+        System.out.println("Введите два числа и операцию (+ или -) через пробел (например, 3 + 7):");
+
+        // Пример как считать ввод пользователя
+        // надо не забыть - import java.util.Scanner;
         Scanner sc = new Scanner(System.in);
         a = sc.nextInt();
         operation = sc.next().charAt(0);
         b = sc.nextInt();
+        // Подробнее про Scanner - https://vertex-academy.com/tutorials/ru/rabota-so-skannerom-v-java/
 
+        // Логика калькулятора
         switch (operation) {
             case '+':
                 result = a + b;

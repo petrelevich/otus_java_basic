@@ -14,13 +14,25 @@ public class LoopsDemo {
         for (int i = 0; i < 5; i++) {
             System.out.println(i);
         }
+        // int i = 0 - инициализация цикла
+        // i < 5     - условие завершения цикла
+        // i++       - изменение счетчика
 
         // В for можно какие-то части опускать
+        System.out.println("===  for (; k < 5; k++) ===");
         int k = 0;
         for (; k < 5; k++) {
             System.out.println(10 * k);
         }
+        // Переменная k будет доступна вне цикла (редко, но иногда такое бывает нужно)
+        System.out.println("k = " + k);
 
+        // Бесконечный цикл
+//        for(;;){
+//            System.out.println("Я в бесконечном цикле");
+//        }
+
+        System.out.println("=== while (a > b) и do ... while (a > b)===");
         // Может быть, что код никогда не выполнится
         int a = 10;
         int b = 20;
@@ -34,6 +46,7 @@ public class LoopsDemo {
             System.out.println("А эта строка будет показана.");
         } while (a > b);
 
+        // Пример использования while - не знаем количество итераций
         // Вычисляем числа Фибоначчи
         // Каждое последующее число равно сумме двух предыдущих чисел
         System.out.println("=== Числа Фибонначи ===");
@@ -41,6 +54,7 @@ public class LoopsDemo {
         int n2 = 1;
         int n3 = n1 + n2;
 
+        // Посчитаем числа Фибонначи меньше 100
         while (n3 < 100) {
             System.out.print(n3 + " ");
             n1 = n2;
@@ -50,13 +64,19 @@ public class LoopsDemo {
 
         // Обход массива
         System.out.println();
-        System.out.println("=== Обход массива");
+        System.out.println("=== Обход массива for");
         int[] daysInMonths = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for (int i = 0; i < daysInMonths.length; i++) {
             System.out.println("Дней в месяце " + (i + 1) + " : " + daysInMonths[i]);
         }
 
-        System.out.println("matrix:");
+        System.out.println();
+        System.out.println("=== Обход массива foreach");
+        for (int dayCount : daysInMonths) {
+            System.out.println("Дней в месяце ??? : " + dayCount);
+        }
+
+        System.out.println("== Обход двумерного массива ===");
         int[][] matrix = {
                 {0, 0, 0, 0, 0},
                 {0, 1, 2, 3, 4},
