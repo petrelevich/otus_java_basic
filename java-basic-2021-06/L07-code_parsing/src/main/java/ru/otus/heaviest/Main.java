@@ -2,6 +2,7 @@ package ru.otus.heaviest;
 
 // https://www.cbr-xml-daily.ru/daily_utf8.xml
 
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import ru.otus.heaviest.ext.MailMessage;
@@ -14,6 +15,7 @@ import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
+// Для работы нужно чтобы папка "resources" была отмечена в IDEA, как "Resource root"
 public class Main {
     private static final String XML_FILE_RESOURCE = "daily_utf8.xml";
     private static final String WORKING_CURRENCY = "USD";
