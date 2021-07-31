@@ -6,7 +6,7 @@ public class StaticDemo {
 
         ClassA obj1 = new ClassA();
         obj1.increaseCount();
-        System.out.println(ClassA.getCount());
+        System.out.println(ClassA.count);
 
         ClassA obj2 = new ClassA();
         obj2.increaseCount();
@@ -17,7 +17,7 @@ public class StaticDemo {
 
 
 class ClassA {
-    private static int count;
+    static int count;
     static {
         count = 10;
     }

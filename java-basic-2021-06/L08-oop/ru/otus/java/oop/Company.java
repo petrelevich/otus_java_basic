@@ -15,7 +15,7 @@ public class Company {
 }
 
 class SubCompany extends Company {
-    void doSomething() {
+    public void doSomething() {
 //        namePrivate = "";
         nameProtected = "";
         namePublic = "";

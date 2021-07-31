@@ -72,6 +72,10 @@ public class BoxDemo {
 
         // Объекты передаются в методы "по ссылке" (по значению ссылки)
         printBox(box1);
+        System.out.println("Box.width  = " + box1.width);
+        System.out.println("Box.height = " + box1.height);
+        System.out.println("Box.depth  = " + box1.depth);
+        // ...
     }
 
     private static void printBox(Box box) {
@@ -79,5 +83,7 @@ public class BoxDemo {
         System.out.println("Box.width  = " + box.width);
         System.out.println("Box.height = " + box.height);
         System.out.println("Box.depth  = " + box.depth);
+
+        box.depth = 1000;
     }
 }
