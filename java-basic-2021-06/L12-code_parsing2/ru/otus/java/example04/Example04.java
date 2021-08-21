@@ -1,7 +1,6 @@
 package ru.otus.java.example04;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 class Person {
     public String name; // На public не обращать внимания
@@ -16,6 +15,10 @@ public class Example04 {
         LinkedList<Person> personsUniqueList = new LinkedList();
 
         fillList(personsUniqueList);
+
+        // Считаем, что есть частая операция contains
+        System.out.println("Contains person3:");
+        System.out.println(personsUniqueList.contains(new Person("person3")));
 
         print(personsUniqueList);
     }
