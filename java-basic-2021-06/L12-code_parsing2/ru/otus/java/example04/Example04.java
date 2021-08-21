@@ -25,7 +25,7 @@ public class Example04 {
         personsUniqueList.add(person1);
         Person person2 = new Person("person2");
         personsUniqueList.add(person1);
-        Person person3 = new Person("person2");
+        Person person3 = new Person("person3");
         personsUniqueList.add(person3);
     }
 
