@@ -1,4 +1,4 @@
-package ru.otus.java;
+package ru.otus.java.example04;
 
 import java.util.LinkedList;
 import java.util.Scanner;
