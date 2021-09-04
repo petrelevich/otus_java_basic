@@ -5,7 +5,7 @@ import ru.otus.demo03.app.service.FactorialCalculatorImpl;
 
 public class FactorialCalculatorTest {
 
-    private FactorialCalculatorImpl factorialCalculator = new FactorialCalculatorImpl();
+    private final FactorialCalculatorImpl factorialCalculator = new FactorialCalculatorImpl();
 
     public void testFactorialCalculationWithPositiveN() {
         String scenario = "Тест расчета с положительным n";

@@ -26,7 +26,9 @@ public class IOServiceSpy implements IOService {
 
     @Override
     public String inputString() {
-        actualFlow.add("inputString was called " + (isFirstInputCall ? "first time" : "another time"));
+        actualFlow.add("inputString was called " +
+                (isFirstInputCall ? "first time" : "another time"));
+
         if (isFirstInputCall) {
             isFirstInputCall = false;
             return "53";

@@ -5,7 +5,7 @@ import ru.otus.demo04.app.service.*;
 
 public class FactorialCalculatorTest04 {
 
-    private final FactorialCalculatorV04 factorialCalculator = new FactorialCalculatorV04();
+    private final FactorialCalculatorV03 factorialCalculator = new FactorialCalculatorV03();
 
     public void testFactorialCalculationForPositiveN() {
         String scenario = "V4. Тест расчета факториала положительного числа";
@@ -40,7 +40,23 @@ public class FactorialCalculatorTest04 {
     public void testFactorialCalculationForNegativeN() {
         String scenario = "V4. Тест расчета факториала отрицательного числа";
         try {
-            Assertions.assertThrows(IllegalArgumentException.class, () -> factorialCalculator.factorial(-10));
+            Throwable actual = null;
+            try {
+                factorialCalculator.factorial(-10);
+            } catch (Throwable e) {
+                actual = e;
+            }
+
+            if (actual == null) {
+                throw new AssertionError("Given code does not throw any exception");
+            } else {
+                Assertions.assertEquals(IllegalArgumentException.class, actual.getClass());
+            }
+
+            /*
+            Assertions.assertThrows(IllegalArgumentException.class,
+                    () -> factorialCalculator.factorial(-10));
+             */
 
             System.out.printf("\"%s\" passed %n", scenario);
         } catch (Throwable e) {
