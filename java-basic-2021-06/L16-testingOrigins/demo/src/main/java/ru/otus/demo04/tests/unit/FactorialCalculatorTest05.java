@@ -44,7 +44,22 @@ public class FactorialCalculatorTest05 {
     public void testFactorialCalculationForNegativeN() {
         String scenario = "V5. Тест расчета факториала отрицательного числа";
         try {
-            Assertions.assertThrows(IllegalArgumentException.class, () -> factorialCalculator.factorial(-10));
+            Throwable actual = null;
+            try {
+                factorialCalculator.factorial(-10);
+            } catch (Throwable e) {
+                actual = e;
+            }
+
+            if (actual == null) {
+                throw new AssertionError("Given code does not throw any exception");
+            } else {
+                Assertions.assertEquals(IllegalArgumentException.class, actual.getClass());
+            }
+            /*
+            Assertions.assertThrows(IllegalArgumentException.class,
+                () -> factorialCalculator.factorial(-10));
+             */
 
             System.out.printf("\"%s\" passed %n", scenario);
         } catch (Throwable e) {
@@ -55,7 +70,24 @@ public class FactorialCalculatorTest05 {
     public void testFactorialCalculationForBigN() {
         String scenario = "V5. Тест расчета факториала большого числа";
         try {
-            Assertions.assertThrows(IllegalArgumentException.class, () -> factorialCalculator.factorial(30));
+            Throwable actual = null;
+            try {
+                factorialCalculator.factorial(30);
+            } catch (Throwable e) {
+                actual = e;
+            }
+
+            if (actual == null) {
+                throw new AssertionError("Given code does not throw any exception");
+            } else {
+                Assertions.assertEquals(IllegalArgumentException.class, actual.getClass());
+            }
+
+            /*
+            Assertions.assertThrows(IllegalArgumentException.class,
+                    () -> factorialCalculator.factorial(30));
+
+             */
 
             System.out.printf("\"%s\" passed %n", scenario);
         } catch (Throwable e) {
