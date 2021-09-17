@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Классная работа</title>
+    <style>
+        h1, h2, h3 {
+            color: steelblue;
+        }
+        
+        .content-block {
+            width: 800px;
+            margin-left: 20px;
+        }
+     
+        .input-form > input{
+            width: 300px;
+        }
+               
+        pre {
+            border: 1px solid steelblue;
+            width: 300px;
+            min-height: 50px;
+        }
+    </style>
+   
+</head>
+
+<body>
+
+<h2>
+Классная работа
+</h2>
+
+
+<h3>
+    Ситуация:
+</h3>
+
+<div class = "content-block" id = "situation">  
+    <p>
+        Закинул старик невод в море...
+    </p>
+</div>
+
+
+<h3>
+    Форма для ввода:
+</h3>
+
+<div class = "input-form"> 
+    <input id = "finalData" type = "text" value = "И сидит теперь на берегу без невода!">
+</div>
+
+
+<!--Сюда вствляем скрипт для первого упражнения-->
+<script>
+    const situation = document.getElementById("situation");
+    const finalData = document.getElementById("finalData");
+    
+    const p = document.createElement("p");
+    p.innerHTML = finalData.value;
+    
+    situation.appendChild(p);
+
+</script>
+
+
+<br/><br/><br/>
+<hr/>
+
+<h3>
+    Животное:
+</h3>
+
+<pre id = "animalContainer"></pre>
+
+<h3>
+    Котик:
+</h3>
+
+<pre id = "kittyContainer"></pre>
+
+<!--Тут выполняем для третье упражнение-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
