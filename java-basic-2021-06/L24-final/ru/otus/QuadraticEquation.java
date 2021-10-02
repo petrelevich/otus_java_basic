@@ -5,6 +5,10 @@ public class QuadraticEquation {
     public static Roots calcRoots(double a, double b, double c)  {
         //ax^{2}+bx+c=0
 
+        if (a == 0) {
+            throw new IllegalArgumentException("a can't be equal 0");
+        }
+
         double discriminant = b * b - 4 * a * c;
         if (discriminant < 0) {
             throw new IllegalArgumentException("Discriminant can't be less then 0, discriminant:" + discriminant);

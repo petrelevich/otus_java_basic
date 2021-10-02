@@ -8,6 +8,7 @@ public class QuadraticEquationTest {
         caseDifferentRoots();
         caseEqualRoots();
         caseNegativeDiscriminant();
+        caseZeroA();
     }
 
     public static void caseDifferentRoots()  {
@@ -51,6 +52,18 @@ public class QuadraticEquationTest {
         double a = 200;
         double b = 7;
         double c = 4;
+
+        try {
+            calcRoots(a, b, c);
+            throw new AssertionError("wrong result");
+        } catch (IllegalArgumentException ex) {
+        }
+    }
+
+    public static void caseZeroA() {
+        double a = 0;
+        double b = 7;
+        double c = 6;
 
         try {
             calcRoots(a, b, c);
