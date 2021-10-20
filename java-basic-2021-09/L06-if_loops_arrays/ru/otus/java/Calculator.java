@@ -14,10 +14,10 @@ public class Calculator {
 
         // Пример как считать ввод пользователя
         // не забудьте - import java.util.Scanner;
-        Scanner sc = new Scanner(System.in);
-        a = sc.nextInt();
-        operation = sc.next().charAt(0);
-        b = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        a = scanner.nextInt();
+        operation = scanner.next().charAt(0);
+        b = scanner.nextInt();
         // Подробнее про Scanner - https://vertex-academy.com/tutorials/ru/rabota-so-skannerom-v-java/
 
         // Логика калькулятора
