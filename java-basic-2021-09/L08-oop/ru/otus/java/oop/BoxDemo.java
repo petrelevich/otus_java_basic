@@ -44,6 +44,7 @@ public class BoxDemo {
 
         // null
         Box box10 = null;
+        // if (box10 == null)
         System.out.println(box10);
 
         System.out.println("=== Зададим значения через поля");
@@ -80,9 +81,9 @@ public class BoxDemo {
         System.out.printf(
                 "width = %f, height = %f, depth = %f\n",
                 box2.width, box2.height, box2.depth);
-        System.out.println("volume() = " + box1.volume());
 
         // Объекты передаются в методы "по ссылке" (по значению ссылки)
+        System.out.println("volume() = " + box1.volume());
         printBox(box1);
         System.out.println("Box.width  = " + box1.width);
         System.out.println("Box.height = " + box1.height);

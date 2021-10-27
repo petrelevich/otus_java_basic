@@ -2,6 +2,7 @@ package ru.otus.java.oop;
 
 class ClassA {
     static int count;
+
     static {
         count = 10;
     }
@@ -18,6 +19,7 @@ class ClassA {
 public class StaticDemo {
     public static void main(String[] args) {
         System.out.println(ClassA.getCount());
+        System.out.println(ClassA.count);
 
         ClassA obj1 = new ClassA();
         obj1.increaseCount();
@@ -25,6 +27,10 @@ public class StaticDemo {
 
         ClassA obj2 = new ClassA();
         obj2.increaseCount();
+        System.out.println(ClassA.getCount());
+
+        ClassA obj3 = new ClassA();
+        obj3.increaseCount();
         System.out.println(ClassA.getCount());
     }
 

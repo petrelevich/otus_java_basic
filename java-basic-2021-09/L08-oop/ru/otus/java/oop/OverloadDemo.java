@@ -48,10 +48,14 @@ public class OverloadDemo {
 //        Какой метод будет вызван здесь?
         int result3 = (int) obj.test(1, 5.6);
 
+        System.out.println("obj.test(2L)");
+        obj.test(2L);
+        System.out.println();
+
 //         Посмотрим для примера методы System.out.print
-        System.out.print(1);
+//        System.out.println();
 
         // И методы в классе Math
-//        Math
+//        Math.abs()
     }
 }
