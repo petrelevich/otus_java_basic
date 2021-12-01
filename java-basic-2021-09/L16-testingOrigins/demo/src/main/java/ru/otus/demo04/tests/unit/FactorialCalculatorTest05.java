@@ -5,7 +5,11 @@ import ru.otus.demo04.app.service.*;
 
 public class FactorialCalculatorTest05 {
 
-    private final FactorialCalculatorV05 factorialCalculator = new FactorialCalculatorV05();
+    // Состояние на момент написания теста
+    private final FactorialCalculatorV04 factorialCalculator = new FactorialCalculatorV04();
+
+    // После починки теста
+    //private final FactorialCalculatorV05 factorialCalculator = new FactorialCalculatorV05();
 
     public void testFactorialCalculationForPositiveNLessThan21() {
         String scenario = "V5. Тест расчета факториала положительного числа";

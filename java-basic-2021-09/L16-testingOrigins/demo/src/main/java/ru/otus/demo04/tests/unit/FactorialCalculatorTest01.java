@@ -4,6 +4,9 @@ import ru.otus.assertions.Assertions;
 import ru.otus.demo04.app.service.*;
 
 public class FactorialCalculatorTest01 {
+    // До того как мы начали писать тест ничего не было и тест не проходил)
+
+    // После починки теста
     private final FactorialCalculatorV01 factorialCalculator = new FactorialCalculatorV01();
 
     public void testFactorialCalculationForN3() {

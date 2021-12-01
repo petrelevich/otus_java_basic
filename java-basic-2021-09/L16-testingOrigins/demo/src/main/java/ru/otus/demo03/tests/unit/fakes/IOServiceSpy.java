@@ -26,13 +26,16 @@ public class IOServiceSpy implements IOService {
 
     @Override
     public String inputString() {
-        actualFlow.add("inputString was called " +
-                (isFirstInputCall ? "first time" : "another time"));
 
+        actualFlow.add("inputString вызван " +
+                (isFirstInputCall ? "впервые" : "второй раз"));
+
+        // Если вызывали метод чтения строки первый раз, то считаем, что ожидается n
         if (isFirstInputCall) {
             isFirstInputCall = false;
             return "53";
         }
+        // иначе, команда "exit"
         return "exit";
     }
 }

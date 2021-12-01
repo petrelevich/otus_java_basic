@@ -14,7 +14,7 @@ public class FactorialCalculatorSpy implements FactorialCalculator {
 
     @Override
     public int factorial(int n) {
-        actualFlow.add(String.format("factorial calculations was called with n = %d", n));
+        actualFlow.add(String.format("Вызов расчета факториала при n = %d", n));
         return 2021;
     }
 }

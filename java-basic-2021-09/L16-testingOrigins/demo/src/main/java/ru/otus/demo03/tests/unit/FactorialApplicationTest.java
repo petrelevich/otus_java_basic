@@ -16,11 +16,11 @@ public class FactorialApplicationTest {
         String scenario = "Тест работы приложения";
         try {
             List<String> expectedFlow = List.of("Введите n или команду \"exit\"",
-                    "inputString was called first time",
-                    "factorial calculations was called with n = 53",
+                    "inputString вызван впервые",
+                    "Вызов расчета факториала при n = 53",
                     "53! = 2021",
                     "Введите n или команду \"exit\"",
-                    "inputString was called another time");
+                    "inputString вызван второй раз");
             List<String> actualFlow = new ArrayList<>();
 
             IOService ioServiceSpy = new IOServiceSpy(actualFlow);
