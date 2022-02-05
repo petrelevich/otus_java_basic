@@ -3,6 +3,7 @@ package ru.otus.java.oop;
 class Counter {
     String name; // Поле принадлежит объекту
     static int count; // Поле принадлежит классу
+    final static int MAX = 10;
 
     static {
         count = 10;
@@ -19,6 +20,8 @@ class Counter {
 
 public class StaticDemo {
     public static void main(String[] args) {
+        int n = Counter.MAX;
+
         System.out.println("1 Counter.count = " + Counter.count);
         System.out.println("2 Counter.getCount() = " + Counter.getCount());
 
