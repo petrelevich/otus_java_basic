@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+</head>
+<body>
+
+
+<form action = "/exam-result" method = "POST">
+    <p>
+        <label for = "fioTextBox">ФИО</label>
+        <input id = "fioTextBox" name = "fio" type = "text">
+    </p>
+
+    <p>
+        <label for = "datePicker">Дата сдачи</label>
+        <input id = "datePicker" name = "examDate" type = "date" value = "2021-05-04">
+    </p>
+
+    <p>
+        <label>
+            Предмет
+            <select name = "discipline">
+                <option value = "1" selected>Математика</option>
+                <option value = "2">Русский</option>
+            </select>
+        </label>    
+    </p>
+    <input type = "submit" value = "Отправить">
+</form>
+
+    
+</body>
+</html>
