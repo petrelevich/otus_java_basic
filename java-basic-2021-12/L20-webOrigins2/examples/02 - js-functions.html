@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - функции</title>
+    <script>
+        function getMessage(name, lastName) {
+            // Строка заключенная в апострофы позволяет 
+            // вставлять в нее значения переменных, через плейсхолждеры ${}
+            return `Здравствуйте, ${lastName} ${name}! Классная погода!`
+        }
+        
+        
+        function greet(name, lastName) {
+            const message = getMessage(name, lastName)
+            alert(message)
+        }
+     </script>
+</head>
+
+<body>
+    <button onclick = 'greet("Иван", "Петров")'>Поздороваться с Иваном Петровым</button>
+
+</body>
+</html>
