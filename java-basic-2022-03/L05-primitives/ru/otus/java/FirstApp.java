@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FirstApp {
     static String greeting = "Привет, ";
 
-    // Метод main - точка входа в программу <1>
+    // Метод main - точка входа в программу
     public static void main(String[] args) {
         /* При запуске программы выполняется код,
             написанный в методе main
@@ -15,6 +15,8 @@ public class FirstApp {
         String message = buildMessage(name);
         //TODO: разобраться, что значит System.out.println
         System.out.println(message); // Вывод сообщения на экран
+
+        //JavaDoc для System - https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/System.html#out
     }
 
     /**

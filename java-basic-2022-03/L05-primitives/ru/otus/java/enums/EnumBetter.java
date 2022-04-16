@@ -19,7 +19,7 @@ public class EnumBetter {
         createReport(JANUARY);
         createReport(FEBRUARY);
         createReport(DECEMBER);
-        // Но все равно можем передать неправильные числа
+        // Но все равно можем передать неправильные числа:
         createReport(13);
         createReport(-1);
     }

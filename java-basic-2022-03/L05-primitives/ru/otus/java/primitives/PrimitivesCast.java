@@ -7,11 +7,11 @@ public class PrimitivesCast {
         // Когда меньший к большему
         // Никакой потери точности нет
         System.out.println("-- автоматическое");
-        byte myByte = 100;
-        short myShort = myByte;
+        byte myByte = 100; // от -128 до 127
+        short myShort = myByte; // от -32 768 до 32 767
         System.out.println("Byte = " + myByte + " -> Short = " + myShort);
 
-        int myInt = 20_000_000; // Можно разделять через _
+        int myInt = 20_000_000; // Разряды числа можно разделять через _
         long myLong = myInt;
         System.out.println("Int  = " + myInt + " -> Long value = " + myLong);
 
@@ -20,7 +20,8 @@ public class PrimitivesCast {
         // Может быть потеря данных
         System.out.println("-- явное с потерей данных");
         long myLongVal = 1_234_567_890_123_456L;
-        //int myIntVal = myLongVal; // Простое присвоение - ошибка.
+//        int myIntVal = myLongVal; // Простое присвоение - ошибка.
+        // Явное приведение через скобки, может быть потеря данных:
         int myIntVal = (int) myLongVal;
         System.out.println("Long = " + myLongVal + " -> Int = " + myIntVal);
 
@@ -49,16 +50,13 @@ public class PrimitivesCast {
         float floatNum = 0.123456789f;
         System.out.println("floatNum = " + floatNum);
 
-        double doubleNum = 0.1 + 0.2;
-
         // Чему равно doubleNum?
+        double doubleNum = 0.1 + 0.2;
         System.out.printf("doubleNum = " + doubleNum);
 
-//         long
 //         Не компилируется. Как исправить?
 //        long longValue = 12345678901;
 
-//         float
 //         Не компилируется. Как исправить?
 //        float floatValue = 100.0;
     }

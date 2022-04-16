@@ -7,7 +7,7 @@ public class Operation {
         int n2 = 2;
         int a = n1 + n2; // Сложение
         int b = n1 - n2; // Вычитание
-        float c = n1 / n2; // Деление
+        int c = n1 / n2; // Деление
         int d = n1 * n2; // Умножение
         int e = n1 % n2; // Остаток от деления
 
@@ -24,8 +24,10 @@ public class Operation {
         i++; // Эквивалентно i = i + 1;
         System.out.println("i++ = " + i);
         i += 5; // Эквивалентно i = i + 5;
-        System.out.println("i += 5 -> " + i++);
+        System.out.println("i += 5 -> " + i);
 
+
+        System.out.println("-- n++ vs ++m");
         int n = 1;
         System.out.println("n++ -> " + n++); // Так лучше не писать - лучше n++ в отдельной строке
 
