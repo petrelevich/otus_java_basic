@@ -40,7 +40,7 @@ public class NumbersDemo {
     }
 
     private static void bitwiseOperations() {
-        // логическое И
+        // битовое И
         long x1 = 0b0010;
         long x2 = 0b0011;
         System.out.println("x1:" + Long.toBinaryString(x1));
@@ -49,11 +49,11 @@ public class NumbersDemo {
         long resultAnd = x1 & x2;
         System.out.println("resultAnd:" + Long.toBinaryString(resultAnd));
 
-        // логическое ИЛИ
+        // битовое ИЛИ
         long resultOr = x1 | x2;
         System.out.println("resultOr:" + Long.toBinaryString(resultOr));
 
-        // логическое НЕ
+        // битовое НЕ
         long resultNot1 = ~x1;
         long resultNot2 = ~x2;
         System.out.println("resultNot1:" + Long.toBinaryString(resultNot1));
@@ -68,11 +68,13 @@ public class NumbersDemo {
         System.out.println("resultShiftRight:" + Long.toBinaryString(resultShiftRight) + " dec:" + resultShiftRight);
 
         //отрицательные числа
-        long negVal = -1;
+        long negVal = -2;
+        long negVal2 = -1;
         System.out.println("negVal                :" + Long.toBinaryString(negVal));
 
         System.out.println("negVal shiftLeft      :" + Long.toBinaryString(negVal << 10));
         System.out.println("negVal shiftRight     :" + Long.toBinaryString(negVal >> 10));
+        System.out.println("negVal shiftRight     :" + Long.toBinaryString(negVal2));
 
         //беззнакоый сдвиг
         System.out.println("negVal shiftRight unSign:        " + Long.toBinaryString(negVal >>> 10));
