@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <div id = "anyDiv">
+        Привет мир!!!
+    </div>
+
+    <div id="divToRemove">Узел для удаления</div>
+
+    <script>
+        const anyDiv = document.getElementById("anyDiv");
+        anyDiv.innerHTML = "<b>Привет мир жирным шрифтом!!!</b>"
+        
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = '<i>Некий курсивный текст. И жирный. Т.к. будет добавлен внутрь тега b внутри anyDiv</i>';
+        anyDiv.firstChild.append(newParagraph)
+        
+        const divToRemove = document.getElementById("divToRemove")
+        divToRemove.parentNode.removeChild(divToRemove)
+    </script>
+</body>
+</html>
