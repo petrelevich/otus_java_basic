@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// Новый класс User
+// Отдельные классы для ввода-вывода, работы с пользователем
 public class Main {
     public static void main(String[] args) {
         AtomicBoolean executionFlag = new AtomicBoolean(true);

@@ -14,6 +14,8 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
+// Новый класс EquationEvaluationResult
+// Отдельные классы для хранения истории, формирования и решения примеров
 public class Main {
     public static void main(String[] args) {
         AtomicBoolean executionFlag = new AtomicBoolean(true);

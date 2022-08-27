@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// Перенос кода по обработки команд в методы, но куда стремиться все же есть
+// Теперь вместо бесконечного цикла, флаг продолжения работы
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

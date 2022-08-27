@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// Рефакторинг handleEquationCommand
+// Новый класс Equation и методы по его формированию из строки и решению
 public class Main {
     public static void main(String[] args) {
         AtomicBoolean executionFlag = new AtomicBoolean(true);
