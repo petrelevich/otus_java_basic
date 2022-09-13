@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Классная работа</title>
+    <style>
+        h1, h2, h3 {
+            color: steelblue;
+        }
+        
+        .content-block {
+            width: 800px;
+            margin-left: 20px;
+        }
+     
+        .input-form > input{
+            width: 300px;
+        }
+               
+        pre {
+            border: 1px solid steelblue;
+            width: 300px;
+            min-height: 50px;
+        }
+    </style>
+    
+    <script>
+        function addFinalText() {
+            const situation = document.getElementById("situation");
+            const finalData = document.getElementById("finalData");
+            
+            let p = document.getElementById("finalText");
+            
+            if (!p) {
+        
+                p = document.createElement("p");
+                p.id = "finalText";
+            }
+            p.innerHTML = finalData.value;
+        
+            situation.appendChild(p);
+        }
+
+    </script>
+</head>
+
+<body>
+
+<h2>
+Классная работа
+</h2>
+
+
+<h3>
+    Ситуация:
+</h3>
+
+<div class = "content-block" id = "situation">  
+    <p>
+        Закинул старик невод в море...
+    </p>
+</div>
+
+
+<h3>
+    Форма для ввода:
+</h3>
+
+<div class = "input-form"> 
+    <input id = "finalData" type = "text" value = "И сидит теперь на берегу без невода!">
+    <button onclick = "addFinalText()">Завершить ситуацию</button>
+</div>
+
+
+<br/><br/><br/>
+<hr/>
+
+<h3>
+    Животное:
+</h3>
+
+<pre id = "animalContainer"></pre>
+
+<h3>
+    Котик:
+</h3>
+
+<pre id = "kittyContainer"></pre>
+
+
+<script>
+    const birthDate = new Date();
+    birthDate.setDate((new Date()).getDate() - 365);
+    
+    const animal = {size: "small", isPredator: true};
+    const kitty = {...animal, name: "Василий", birthDate: birthDate};
+    
+    const animalContainer = document.getElementById("animalContainer");
+    const kittyContainer = document.getElementById("kittyContainer");
+    
+    animalContainer.innerHTML = JSON.stringify(animal, null, 2);
+    kittyContainer.innerHTML = JSON.stringify(kitty, null, 2);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
