@@ -54,7 +54,7 @@ class ElectronicGuardSystem implements Guarding {
 
     @Override
     public void guard() {
-        System.out.println("Включение ElectronicGuardSystem...");
+        System.out.println("Сигнализация включена...");
     }
 }
 
