@@ -12,7 +12,7 @@ import java.util.Scanner;
 //В этом задании не нужно использовать ООП (создавать классы), вопросы и варианты ответов надо хранить в массиве (массивах).
 public class TestingSystem {
     static int rightAnswers = 0;
-    private static int AskAQuestion() {
+    private static int askAQuestion() {
         Scanner scanner = new Scanner(System.in);
         String[] questions = new String[]{"Сколько глаз у Майка Вазовски?",
                 "Сколько глаз у Джеймса Салливана?",
@@ -50,13 +50,21 @@ public class TestingSystem {
         System.out.println("Если хотите продолжить нажмите 1, иначе введите 2");
         Scanner scanner = new Scanner(System.in);
         if (scanner.nextInt() == 1){
-            correctnessCheck(displayAnswers(AskAQuestion()));
+            testReapid();
         } else {
             System.out.println("Спасибо за прохождение теста, вы ответили верно на " + rightAnswers + " вопросов.");
         }
     }
 
+    private static void testReapid(){
+        correctnessCheck(displayAnswers(askAQuestion()))
+        int  askAQuestion = askAQuestion();
+        int[] displayAnswers = displayAnswers(askAQuestion);
+        correctnessCheck(displayAnswers);
+
+    }
+
     public static void main(String[] args) {
-        correctnessCheck(displayAnswers(AskAQuestion()));
+        testReapid();
     }
 }
