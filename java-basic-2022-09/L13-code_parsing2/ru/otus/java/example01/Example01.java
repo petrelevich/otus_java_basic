@@ -7,7 +7,7 @@ public class Example01 {
                 "ABC corporation",
                 "John",
                 "123-45-67",
-                "123123");
+                null);
 
         var discount = customer.getDiscount();
         System.out.println(discount);
@@ -17,7 +17,7 @@ public class Example01 {
                 "Ivanov",
                 null,
                 null,
-                null);
+                "4257932619875103");
 
         var discountIvanov = ivanov.getDiscount();
         System.out.println(discountIvanov);
