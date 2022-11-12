@@ -12,6 +12,7 @@ class Person {
 
 public class Example04 {
     public static void main(String[] args) {
+        // Считаем, что программист хотел создать список с уникальными Person
         LinkedList<Person> personsUniqueList = new LinkedList<>();
 
         fillList(personsUniqueList);
