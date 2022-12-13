@@ -1,0 +1,99 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Классная работа</title>
+    <style>
+        h1, h2, h3 {
+            color: steelblue;
+        }
+        
+        .students-tab {
+            border: 1px solid steelblue;
+            width: 250px;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+        }
+
+        .students-tab tr td {
+            border: 1px solid steelblue;
+        }
+
+        .students-tab-col1 {
+            width: 250px;
+        }
+    </style>
+    
+    <script>
+        "use strict"
+        
+        function addStudent() {
+            const studentsTab = document.getElementById("studentsTab");
+            const studentName = document.getElementById("studentName").value;
+            
+            const newRow = studentsTab.insertRow(studentsTab.rows.length);
+            
+            studentName += "(new)";
+            
+            newCell = newRow.insertCell(-1);
+            newCell.appendChild(document.createTextNode(studentName));
+        }
+    
+    </script>
+    
+</head>
+
+<body>
+
+    <h2>
+        Классная работа
+    </h2>
+
+    <h3>Таблица студентов</h3>
+    <table class="students-tab" id="studentsTab">
+        <thead>
+            <tr>
+                <td class="students-tab-col1">Имя студента</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Иван Ограномович Штейн</td>
+            </tr>
+            <tr>
+                <td>Гертруда Анатольевна Иванова</td>
+            </tr>
+            <tr>
+                <td>Воланд Игоревич Муха</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class = "input-form"> 
+        <label> 
+            Новый студент:
+            <input id = "studentName" type = "text" value = "Ноунэйм">
+            <button onclick = "addStudent()">Добавить</button>
+        </label>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
